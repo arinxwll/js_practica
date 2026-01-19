@@ -47,7 +47,16 @@ if (number <= 0) {
 
 let price = 1000;
 let precent = 15;
-console.log(price * precent/1);
+console.log(price *100/precent);
+
+const filterLongWords = (words, minLength) => {
+    return words.filter((word) => word.length >= minLength);
+};
+const animals = ["cat", "parrot", "gog", "fox"];
+const min = 4;
+filterLongWords(animals,min);
+
+
 
 
 
