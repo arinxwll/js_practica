@@ -162,3 +162,98 @@ function formatUsers(users, formatter) {
       return balance;
     };
   };
+
+  const promise = new Promise((resolve, reject) => {
+    resolve("ready");
+  });
+
+  promise.then ( result => {
+    console.log(result);
+  });
+
+  promise.catch(error => {
+    console.log(error);
+  });
+
+  promise.finally(() => {
+    console.log("end");
+  });
+
+  /*fetch(url)
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.log(err))
+*/
+  async function loadData() {
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+    console.log(data);
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+
+  const promis = new Promise((resolve, reject) => {
+    resolve(10);
+    promis.then(res => {
+      return res * 2;
+    })
+    promis.then(res => {
+      return res + 5;
+  })
+  promis.then(dat => {
+    console.log(dat);
+  })
+});
+const promiss = new Promise((resolve, reject) => {
+  resolve(1);
+promiss.then(res => {
+  return res + 1;
+})
+promiss.then(res => {
+  return res + 1;
+})
+promiss.then(res => {
+  return res + 1;
+})
+promiss.then(res => {
+  return res + 1;
+})
+promiss.then(res => {
+  return res + 1;
+})
+promiss.then(final => {
+  console.log(final);
+})
+});
+
+const prom = new Promise((resolve, reject) => {
+  resolve("hello");
+prom.then(stroka => {
+return stroka.toUpperCase();
+})
+prom.then(stroka => {
+  return stroka + "!";
+  })
+  prom.then
+})
+
+const p1 = Promise.resolve(10);
+const p2 = Promise.resolve(20);
+const p3 = Promise.resolve(30);
+
+Promise.all([p1, p2, p3])
+.then(result => {
+  console.log(result);
+})
+
+const aaa = new Promise(res => setTimeout(() => ReadableS("A"), 1000));
+const bbb = new Promise(res => setTimeout(() => ReadableStream("B"), 500));
+
+Promise.all([aaa, bbb]).then(resulr => {
+  console.log(resulr);
+});
+
+ 
