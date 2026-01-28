@@ -256,4 +256,6 @@ Promise.all([aaa, bbb]).then(resulr => {
   console.log(resulr);
 });
 
- 
+ const canvas = document.getElementById("canvas");
+
+ const ctx = canvas.getContext("2d");
